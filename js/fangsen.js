@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let citiesData = [];
 
-    fetch('../data/looping.json')
+    fetch('./data/looping.json')
         .then(response => response.json())
         .then(data => {
             citiesData = data;
