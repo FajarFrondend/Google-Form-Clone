@@ -131,7 +131,7 @@ document.getElementById('myForm').addEventListener('submit', async function(even
     console.log('Data to be sent:', formData); 
 
     try {
-        const response = await fetch('https://backend-6es6.vercel.app/submit/submit', { // URL backend Express.js https://backend-fcnj4p8iv-benjis-projects-2d9aa7eb.vercel.app/submit
+        const response = await fetch('https://backend-6es6.vercel.app/submit', { // URL backend Express.js https://backend-fcnj4p8iv-benjis-projects-2d9aa7eb.vercel.app/submit
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(formData)
