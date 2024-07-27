@@ -130,20 +130,16 @@ document.getElementById('myForm').addEventListener('submit', async function(even
 
     console.log('Data to be sent:', formData); // Log data yang akan dikirim
 
-    try {
-        const response = await fetch('https://new-express-project-676z7w4cx-benjis-projects-2d9aa7eb.vercel.app/submit', { // URL backend Express.js https://backend-fcnj4p8iv-benjis-projects-2d9aa7eb.vercel.app/submit
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(formData)
-        });
-
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-
-        const result = await response.json();
-        console.log('Success:', result);
-    } catch (error) {
-        console.error('Error:', error);
-    }
+    fetch('https://new-express-project-j1jyyure4-benjis-projects-2d9aa7eb.vercel.app/submit', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+            // data kamu di sini
+        })
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));
 });
